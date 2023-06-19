@@ -4,30 +4,25 @@
  */
 
 :root {
-    /* --color-text-primary: #333; */
-		--color-text-primary: #35495E;
+    --color-text-primary: #333;
     --color-text-tertiary: #777;
     --color-text-link: #4078c0;
-		--color-text-headline: #42B883;
-    --color-bg-primary: #EEE8D5;
+    --color-bg-primary: #fff;
     --color-bg-secondary: #fafbfc;
     --color-bg-tertiary: #f8f8f8;
     --color-border-primary: #ddd;
-    --color-border-secondary: #eaecef;
+    --color-border-secondary: #fe8019;
     --color-border-tertiary: #d1d5da;
     --color-kbd-foreground: #444d56;
     --color-markdown-blockquote-border: #dfe2e5;
-    /* --color-markdown-table-border: #dfe2e5; */
-    --color-markdown-table-border: #000;
+    --color-markdown-table-border: #dfe2e5;
     --color-markdown-table-tr-border: #c6cbd1;
-    /* --color-markdown-code-bg: #1b1f230d; */
-		--color-markdown-code-bg: #E6FFEC;
+    --color-markdown-code-bg: #1b1f230d;
 }
 [data-theme="dark"] {
     --color-text-primary: #c9d1d9;
     --color-text-tertiary: #8b949e;
     --color-text-link: #58a6ff;
-		--color-text-headline: #42B883;
     --color-bg-primary: #0d1117;
     --color-bg-secondary: #0d1117;
     --color-bg-tertiary: #161b22;
@@ -38,8 +33,7 @@
     --color-markdown-blockquote-border: #3b434b;
     --color-markdown-table-border: #3b434b;
     --color-markdown-table-tr-border: #272c32;
-    /* --color-markdown-code-bg: #f0f6fc26; */
-		--color-markdown-code-bg: #3549E;
+    --color-markdown-code-bg: #f0f6fc26;
 }
 
 .markdown-body ol ol,
@@ -54,16 +48,17 @@
   margin-bottom: 0;
 }
 .markdown-body {
-  font-family: "仓耳今楷03", "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: Monaco, "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 16px;
   color: var(--color-text-primary);
-  line-height: 1.2;
+  line-height: 1.6;
   word-wrap: break-word;
   padding: 45px;
-  background: var(--color-bg-primary);
+  background: #242a32
   border: 1px solid var(--color-border-primary);
   -webkit-border-radius: 0 0 3px 3px;
-  border-radius: 0 0 3px 3px;
+  border-radius: 0 0 13px 13px;
+  background-color: #242a32;
 }
 .markdown-body > *:first-child {
   margin-top: 0 !important;
@@ -92,7 +87,6 @@
   margin-bottom: 16px;
   font-weight: bold;
   line-height: 1.4;
-	color: var(--color-text-headline);
 }
 .markdown-body h1 .anchor,
 .markdown-body h2 .anchor,
@@ -121,28 +115,37 @@
   margin-top: 0;
   margin-bottom: 16px;
 }
+
+.markdown-body p,
+.markdown-body table {
+	color: white;
+}
+
 .markdown-body h1 {
   margin: 0.67em 0;
   padding-bottom: 0.3em;
   font-size: 2.25em;
   line-height: 1.2;
-  border-bottom: 1px solid var(--color-border-secondary);
+  color: #7aa36f;
 }
 .markdown-body h2 {
   padding-bottom: 0.3em;
   font-size: 1.75em;
   line-height: 1.225;
-  border-bottom: 1px solid var(--color-border-secondary);
+  color: #fe8019;
 }
 .markdown-body h3 {
   font-size: 1.5em;
   line-height: 1.43;
+  color: #e5c07b;
 }
 .markdown-body h4 {
   font-size: 1.25em;
+  color: #d54e53;
 }
 .markdown-body h5 {
   font-size: 1em;
+  color: #c678dd;
 }
 .markdown-body h6 {
   font-size: 1em;
@@ -153,7 +156,7 @@
   margin-bottom: 20px;
   height: 0;
   border: 0;
-  border-top: 3px double var(--color-border-primary);
+  border-top: 2px dashed #bbccdd;
 }
 .markdown-body ol,
 .markdown-body ul {
@@ -216,7 +219,7 @@
 .markdown-body table td {
   padding: 6px 13px;
   border: 1px solid var(--color-markdown-table-border);
-  vertical-align: top;
+  background-color: blue;
 }
 .markdown-body kbd {
   display: inline-block;
@@ -235,11 +238,10 @@
   padding: 16px;
   overflow: auto;
   font-size: 85%;
-  line-height: 1.0;
-  background-color: var(--color-markdown-code-bg);
+  line-height: 1.45;
+  background-color: #FDF6E3;
   -webkit-border-radius: 3px;
-  border-radius: 12px;
-	border: 2px solid;
+  border-radius: 13px;
 }
 .markdown-body pre code {
   display: inline;
@@ -261,7 +263,7 @@
   content: normal;
 }
 .markdown-body code {
-  font-family: "FantasqueSansMono Nerd Font", "仓耳今楷03", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
   padding: 0;
   padding-top: 0.2em;
   padding-bottom: 0.2em;
